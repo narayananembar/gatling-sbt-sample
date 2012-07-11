@@ -1,9 +1,12 @@
-import com.excilys.ebi.gatling.core.scenario.configuration.Simulation
-import com.excilys.ebi.gatling.core.Predef._
+import be.nextlab.gatling.sbt.plugin.Simulation
+import com.excilys.ebi.gatling.core.Predef.{Simulation => GSimulation, _}
 import com.excilys.ebi.gatling.http.Predef._
 
 class SampleSimulation() extends Simulation {
     
+    def pre = {}
+    def post = {}
+
     def apply = {
 
       val headers_1 = Map(
