@@ -14,8 +14,7 @@ object MinimalBuild extends Build {
   val localMavenRepo = "Local Maven Repository" at file(Path.userHome.absolutePath+"/.m2/repository").toURI.toURL.toString
 
   val libDependencies = Seq(
-
-    "be.nextlab" %% "gatling-sbt-test-framework" % "0.0.1-SNAPSHOT"
+    "be.nextlab" %% "gatling-sbt-test-framework" % "0.0.1-SNAPSHOT" % "gatling-test"
   )
 
 

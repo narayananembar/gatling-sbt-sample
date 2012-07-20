@@ -14,7 +14,7 @@ class SampleSimulation() extends Simulation {
         "Accept-Charset" -> "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
       )
 
-      val scn = scenario("test")
+      val scn = scenario("GGL")
         .exec(
         http("request_1")
           .get("/")
@@ -24,6 +24,6 @@ class SampleSimulation() extends Simulation {
 
       val httpConf = httpConfig.baseURL("http://www.google.com")
 
-      Seq(scn.configure users 10 ramp 2 protocolConfig httpConf)
+      Seq(scn.configure users 10000 ramp 2 protocolConfig httpConf)
   }
 }
